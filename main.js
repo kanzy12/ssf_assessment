@@ -140,7 +140,7 @@ app.get('/game/:gid', (req, res) => {
                 {
                     game: gameInfo,
                     comments: comments,
-                    firstComment: offset + 1,
+                    firstComment: totalCount > 0? offset + 1 : 0,
                     lastComment: Math.min(offset + commentsPerPage, totalCount),
                     totalCount: totalCount,
                     hasPrevious: offset > 0,
