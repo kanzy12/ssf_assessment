@@ -1,0 +1,29 @@
+{
+  "name": "ssf_assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss public/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kanzy12@github.com/kanzy12/ssf_assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanzy12/ssf_assessment/issues"
+  },
+  "homepage": "https://github.com/kanzy12/ssf_assessment#readme",
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "bulmaswatch": "^0.7.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1",
+    "node-sass": "^4.12.0"
+  }
+}

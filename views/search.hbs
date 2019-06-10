@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="title is-2">Searching for '{{query}}'</h2>
+</div>
+{{#if hasResults}}
+<div class="container">
+    <table class="table is-striped is-bordered is-hoverable">
+        <thead>
+            <tr>
+                <td>Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each games}}
+            <tr>
+                <td>
+                    <a href="/game/{{this.gid}}">
+                        {{this.name}}
+                    </a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+<div class="container">
+    <h2>No results found</h2>
+</div>
+{{/if}}
+<div class="container">
+    <a href="/" class="button">Back</a>
+</div>

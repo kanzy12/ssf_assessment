@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../node_modules/bulmaswatch/superhero/variables";
+
+//set variables 
+$table-head-background-color: $grey-darker;
+$table-row-hover-background-color: $grey;
+$table-striped-row-even-hover-background-color: $grey;
+
+$card-header-background-color: $grey;
+$card-content-background-color: $grey-dark;
+
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulmaswatch/superhero/overrides";
+
+
+td a {
+    display: block;
+}

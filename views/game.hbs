@@ -1,0 +1,44 @@
+<div>
+    <div clas="card">
+        <div class="card-header">
+            <div class="card-header-icon">
+                <img src="{{game.image}}">
+            </div>
+            <p class="card-header-title title is-4">{{game.name}}</p>
+        </div>
+        <div class="card-content">
+            <div>
+                Published: {{game.year}}
+            </div>
+            <div>
+                Ranking: {{game.ranking}}
+            </div>
+            <div>
+                Users rated: {{game.users_rated}}
+            </div>
+            <div>
+                <a href="{{game.url}}" target="_blank">View on boardgamegeek</a>
+            </div>
+            <div>
+                <a href="/" class="button">Back to search</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <h2 class="title is-4">Comments</h2>
+    </div>
+    <div class="container">
+        Showing {{firstComment}} to {{lastComment}} of {{totalCount}}
+    </div>
+    <div class="container">
+        {{#each comments}}
+            {{>comment this}}
+        {{/each}}
+    </div>
+    <div class="container">
+        <a {{#if hasPrevious}}href="/game/{{game.gid}}/?offset={{previousOffset}}"{{else}}disabled{{/if}} class="button">Previous<a>
+        <a {{#if hasNext}}href="/game/{{game.gid}}/?offset={{nextOffset}}"{{else}}disabled{{/if}} class="button">Next<a>
+    </div>
+</div>
